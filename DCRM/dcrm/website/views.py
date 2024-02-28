@@ -11,11 +11,11 @@ def home(request):
         print(user)
         if user is not None:
             login(request, user)
-            messages.error(request, 'Logged in successfully')
+            messages.success(request, 'Logged in successfully')
              # Clear all previous messages
             storage = messages.get_messages(request)
             storage.used = True
-            return redirect('home')  # Redirect to a success page
+            return redirect('home')  # Redirect to a home page
         else:
             messages.error(request, 'Invalid username or password.')
              # Clear all previous messages
@@ -23,8 +23,11 @@ def home(request):
             storage.used = True
     return render(request, "home.html", {})
 
-def login_user(req):
-     return render(req, "home.html", {})
+# def login_user(req):
+#      return render(req, "home.html", {})
 
-def logout_user(req):
-    pass
+def logout_user(request):
+    logout(request)
+    messages.success(request,"you have logged out!")
+    return redirect("home")
+
