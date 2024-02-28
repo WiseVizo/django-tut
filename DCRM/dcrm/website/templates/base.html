@@ -16,7 +16,12 @@
       </ul>
     </nav>
     {% if messages %} {% for message in messages %}
-    <div class="message">{{ message }}</div>
+    <div class="message">
+      <p>
+        {{ message }}
+        <span class="cross">&times;</span>
+      </p>
+    </div>
     {% endfor %} {% endif %}
     <div>{% block content %} {% endblock %}</div>
   </body>

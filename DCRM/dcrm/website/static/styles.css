@@ -37,8 +37,21 @@ nav {
 }
 
 .message {
+  text-align: center;
+  text-wrap: nowrap;
+}
+
+.message > p {
   background-color: aquamarine;
   color: black;
-  text-align: center;
   border: 2px solid rebeccapurple;
+  margin: 10px;
+  padding: 15px;
+  font-size: 20px;
+  display: inline-block;
+}
+
+.cross {
+  font-size: 30px;
+  margin: 10px;
 }
