@@ -13,3 +13,32 @@ nav {
   color: white;
   margin: 16px;
 }
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-group {
+  padding: 5px;
+}
+
+.form-group > input {
+  height: 40px;
+  width: 260px;
+  font-size: medium;
+}
+
+.form-group > input::placeholder {
+  font-size: medium;
+  text-align: center;
+}
+
+.message {
+  background-color: aquamarine;
+  color: black;
+  text-align: center;
+  border: 2px solid rebeccapurple;
+}
